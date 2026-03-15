@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: bisque;
 }
 
 #root {
@@ -14,8 +13,7 @@ html, body {
 main {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
-  overflow: scroll;
+  overflow: visible;
   justify-content: center;
   align-items: center;
 }
