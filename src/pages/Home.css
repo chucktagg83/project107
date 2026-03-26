@@ -1,21 +1,17 @@
-body {
-    text-align: center;
-    font-size: 16px;
-}
 
-div .product{
+div .primary-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
-}
-h1 {
-    text-align: center;
-    padding: 15px;
-}
 
-button {
+
+} 
+
+div .img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 }

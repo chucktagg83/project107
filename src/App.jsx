@@ -1,23 +1,29 @@
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css'
 import Navbar from "./components/navbar";
-import Catalog from "./pages/catalog";
 import Footer from "./components/footer";
+import Home from "./pages/Home";
+import Catalog from "./pages/catalog";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
 
-      <main>
-        <h1>Hello from React</h1>
-        <Catalog />
-      </main>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/catalog' element={<Catalog />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
 
-      <Footer />
-    </>
+       <Footer /> 
+    </BrowserRouter>
   )
 }
 
-export default App
+export default App;
