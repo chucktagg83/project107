@@ -1,8 +1,6 @@
-import "./Footer.css"
-
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className= "text-bg-dark p-3">
       <p>© 2026 Hometown Farmer's Market.  All Rights Reserved.</p>
     </footer>
   );

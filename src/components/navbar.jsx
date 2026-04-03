@@ -45,9 +45,9 @@ function Navbar(){
         </li>
           
         <li className="nav-item">
-          <a className="nav-link disabled" aria-disabled="true">
-            Disabled
-          </a>
+          <Link className="nav-link" to={"/Admin"}>
+           Admin 
+          </Link>
         </li>
       </ul>
       <form className="d-flex" role="search">
