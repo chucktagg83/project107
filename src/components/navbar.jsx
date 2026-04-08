@@ -1,13 +1,19 @@
-import { Link } from 'react-router-dom'
+//Imports
+import { useContext } from 'react'; 
+import GlobalContext from '../state/globalContext';
+
+import { Link } from 'react-router-dom';
+import { IconUser } from '@tabler/icons-react';
 
 
 
 function Navbar(){
+  const user = useContext(GlobalContext).user; // Accessing the user object from the global context using useContext hook 
     return(
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
-      Navbar
+      Hometown Farmer's Market
     </a>
     <button
       className="navbar-toggler"
@@ -47,6 +53,11 @@ function Navbar(){
         <li className="nav-item">
           <Link className="nav-link" to={"/Admin"}>
            Admin 
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="btn btn-secondary" to={"/profile"}>
+          <IconUser stroke={2} /> {user.firstName} {user.lastName}
           </Link>
         </li>
       </ul>

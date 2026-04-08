@@ -45,9 +45,13 @@ function Catalog(){
        return(
         <div className="catalog">
             <h1>Check our amazing products</h1>
+            <div className='filter-buttons'>
             {categories.map(cat => <button key={cat} onClick={() => filter(cat)}>{cat}</button>)}
+            </div>
             <br/>
-           {productsToDisplay.map(prod => <Product key={prod._id} data={prod}/>)}
+            <div className="products-grid"> 
+               {productsToDisplay.map(prod => <Product key={prod._id} data={prod}/>)} 
+            </div>
         </div>
     )
 }
